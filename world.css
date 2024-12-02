@@ -19,11 +19,11 @@ header h1{
 }
 
 #headerImage{
-    width: 80px;
+    width: 200px;
     height: auto;
     margin-right: 15px;
 }
-/* Title bar (header) styling */
+
 header {
     display: flex;
     justify-content: center;
@@ -40,20 +40,19 @@ header {
     z-index: 1000;
 }
 
-/* Controls section styling */
 #controls {
     display: flex;
-    flex-direction: column; /* Stack search bar and buttons vertically */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    margin-top: 200px; /* Space for the fixed header */
-    gap: 15px; /* Space between elements */
-    width: 100%; /* Ensure the controls section takes up full width */
+    margin-top: 200px; 
+    gap: 15px; 
+    width: 100%; 
 }
 
-/* Styling for the search bar */
+
 #country {
-    width: 150%; /* Make the search bar 70% of the page width */
+    width: 150%; 
     padding: 12px;
     font-size: 1.1em;
     border: 1px solid #ddd;
@@ -67,27 +66,24 @@ header {
     justify-content: center;
     gap: 15px;
 }
-/* Styling for the buttons */
+
 button {
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50; 
     color: white;
-    font-size: 1em; /* Make font size consistent */
+    font-size: 1em; 
     padding: 12px 20px;
     border: none;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
-
-
-/* Button styling for "Lookup Cities" */
 #lookupCities {
-    background-color: #1680f0; /* Blue */
+    background-color: #1680f0; 
 }
 
 
 table {
-    width: 80%; /* Table width */
+    width: 100%; 
     margin: 20px auto;
     justify-content: center;
     border-collapse: collapse;
@@ -95,7 +91,7 @@ table {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Table header and cell styling */
+
 th, td {
     border: 1px solid #ddd;
     padding: 12px;
@@ -108,19 +104,17 @@ thead {
 }
 
 tbody tr:nth-child(odd) {
-    background-color: #f9f9f9; /* White for odd rows */
+    background-color: #f9f9f9; /
 }
 
 tbody tr:nth-child(even) {
-    background-color: #ffffff; /* Light grey for even rows */
+    background-color: #ffffff; 
 }
 
-
-/* Result section styling */
 #result {
     justify-content: center;
     margin-top: 20px;
     text-align: center;
-    width: 80%;
-    max-width: 800px;
+    width: 110%;
+    max-width: 1500px;
 }

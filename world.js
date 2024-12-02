@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function(){
                 }
             };
 
-            getCountry.open('GET', `./world.php?city=${encodeURIComponent(citylookup)}`, true);
-            getCountry.send();
+            getCity.open('GET', `./world.php?country=${encodeURIComponent(citylookup)}&lookup=cities`, true);
+            getCity.send();
         });
 });
