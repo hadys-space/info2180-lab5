@@ -7,6 +7,7 @@ $dbname = 'world';
 $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 
 
+
 $country = isset($_GET['country'])? trim($_GET['country']): '';
 
 if(!empty($country)){
@@ -19,14 +20,29 @@ else{
 
 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+echo "<table>
+        <thead>
+            <tr>
+              <th>Country Name</th>
+              <th>Continent</th>
+              <th>Independence Year</th>
+              <th>Head of State</th>      
+            </tr>
+        </thead>
+        <tbody>";
+
+        foreach ($results as $row){
+            echo "<tr>
+                    <td>{$row['name']}</td>
+                    <td>{$row['continent']}</td>
+                    <td>{$row['independence_year']}</td>
+                    <td>{$row['head_of_state']}</td>
+                  </tr>";
+
+        }
+
+        echo "</tbody></table>";
+
 
 ?>
-<ul>
-<?php if(!empty($results)): ?>
-  <?php foreach ($results as $row): ?>
-    <li><?= htmlspecialchars($row['name']) . ' is ruled by ' . htmlspecialchars($row['head_of_state']); ?></li>
-  <?php endforeach; ?>
-<?php else: ?> 
-    <li>No results found.</li>
-<?php endif; ?>
-</ul>
+

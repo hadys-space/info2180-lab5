@@ -1,1 +1,126 @@
 /* Add your own styles */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+header h1{
+    margin:0;
+    font-size: 2em;
+    white-space: nowrap; 
+    text-align: center;      
+}
+
+#headerImage{
+    width: 80px;
+    height: auto;
+    margin-right: 15px;
+}
+/* Title bar (header) styling */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width: 100%;
+    height: 20%;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Controls section styling */
+#controls {
+    display: flex;
+    flex-direction: column; /* Stack search bar and buttons vertically */
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px; /* Space for the fixed header */
+    gap: 15px; /* Space between elements */
+    width: 100%; /* Ensure the controls section takes up full width */
+}
+
+/* Styling for the search bar */
+#country {
+    width: 150%; /* Make the search bar 70% of the page width */
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+/* Styling for the buttons */
+button {
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    font-size: 1em; /* Make font size consistent */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+
+
+/* Button styling for "Lookup Cities" */
+#lookupCities {
+    background-color: #1680f0; /* Blue */
+}
+
+
+table {
+    width: 80%; /* Table width */
+    margin: 20px auto;
+    justify-content: center;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Table header and cell styling */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+    font-size: 1.1em;
+}
+
+thead {
+    background-color: #ffffff;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f9f9f9; /* White for odd rows */
+}
+
+tbody tr:nth-child(even) {
+    background-color: #ffffff; /* Light grey for even rows */
+}
+
+
+/* Result section styling */
+#result {
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+}

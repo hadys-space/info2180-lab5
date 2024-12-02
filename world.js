@@ -1,9 +1,10 @@
 document.addEventListener('DOMContentLoaded', function(){
-        const lookupbtn = document.getElementById("lookup");
+        const lookupCountrybtn = document.getElementById("lookupCountry");
+        const lookupCitiesbtn = document.getElementById("lookupCities");
         const result = document.getElementById("result");
         const countrySearch = document.getElementById("country");
 
-        lookupbtn.addEventListener('click', function(){
+        lookupCountrybtn.addEventListener('click', function(){
             const getCountry = new XMLHttpRequest();
             let countrylookup = countrySearch.value.trim();
 
@@ -21,6 +22,27 @@ document.addEventListener('DOMContentLoaded', function(){
             };
 
             getCountry.open('GET', `./world.php?country=${encodeURIComponent(countrylookup)}`, true);
+            getCountry.send();
+        });
+
+        lookupCitiesbtn.addEventListener('click', function(){
+            const getCity = new XMLHttpRequest();
+            let citylookup = countrySearch.value.trim();
+
+
+            getCity.onreadystatechange = function(){
+            
+                if(getCity.readyState === XMLHttpRequest.DONE){
+                    if(getCity.status === 200){
+                        result.innerHTML = getCity.responseText;
+                    }
+                    else{
+                        result.innerHTML = `<p>Error: Unable to fetch city's data.</p>`;
+                    }
+                }
+            };
+
+            getCountry.open('GET', `./world.php?city=${encodeURIComponent(citylookup)}`, true);
             getCountry.send();
         });
 });
